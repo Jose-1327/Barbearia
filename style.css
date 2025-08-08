@@ -1,0 +1,109 @@
+/* Reset e fonte básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
+  color: #072b4e;
+}
+
+/* Cabeçalho fixo */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 50px;
+  background: linear-gradient(to right, #063261, #008bd1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #e0f0ff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #cce6ff, #ffffff);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #003366;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.btn {
+  background: #074486;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 13px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0069d3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    background: #007bff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .menu ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

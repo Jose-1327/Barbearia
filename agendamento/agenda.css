@@ -1,0 +1,133 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #022d55, #91c1ee);
+  color: #072b4e;
+  padding: 40px 0;
+}
+
+.cadastro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Caixa principal aumentada */
+.cadastro-container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffffd9;
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 51, 102, 0.15);
+}
+
+.cadastro-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #083361;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.cadastro-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #072b4e;
+}
+
+.cadastro-form input[type="date"],
+.cadastro-form input[type="time"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #3396d8;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f4faff;
+  transition: border-color 0.3s;
+}
+
+.cadastro-form input:focus {
+  border-color: #074486;
+  outline: none;
+}
+
+/* Serviços organizados como cartões */
+.servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.servicos label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f7fc;
+  border: 1px solid #cde3f9;
+  padding: 12px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.servicos label:hover {
+  background: #e0f0ff;
+  border-color: #3396d8;
+}
+
+.servicos input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #074486;
+}
+
+.servicos span {
+  flex: 1;
+}
+
+.servicos strong {
+  color: #063261;
+  font-weight: bold;
+}
+
+/* Total */
+#total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #083361;
+  margin-top: 10px;
+}
+
+/* Botão */
+.btn {
+  background: #074486;
+  color: white;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #0069d3;
+}
