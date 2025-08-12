@@ -10,35 +10,33 @@ body {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #022d55, #91c1ee);
   color: #072b4e;
-  padding: 40px 0;
+  padding: 40px 10px;
 }
 
 .cadastro-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
-/* Caixa principal aumentada */
 .cadastro-container {
   width: 100%;
   max-width: 900px;
   background: #ffffffd9;
-  padding: 50px 60px;
+  padding: 30px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 51, 102, 0.15);
 }
 
 .cadastro-container h2 {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 32px;
+  margin-bottom: 20px;
+  font-size: clamp(20px, 4vw, 32px);
   color: #083361;
 }
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .cadastro-form label {
@@ -64,12 +62,11 @@ body {
   outline: none;
 }
 
-/* Serviços organizados como cartões */
+/* Serviços */
 .servicos {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 10px;
 }
 
 .servicos label {
@@ -95,16 +92,6 @@ body {
   accent-color: #074486;
 }
 
-.servicos span {
-  flex: 1;
-}
-
-.servicos strong {
-  color: #063261;
-  font-weight: bold;
-}
-
-/* Total */
 #total {
   font-size: 20px;
   font-weight: bold;
@@ -130,4 +117,16 @@ body {
 
 .btn:hover {
   background: #0069d3;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .cadastro-container {
+    padding: 20px;
+  }
+  .servicos label {
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
