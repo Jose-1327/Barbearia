@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Título da Página</title>
+  <link rel="stylesheet" href="redes.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">Redes Sociais</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="../../index.html">Início</a></li>
+        <li><a href="../sobre/sobre.html">Sobre</a></li>
+        <li><a href="../prof/prof.html">Profissionais</a></li>
+        <li><a href="../serv/serv.html">Serviços</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="content">
+      <h1>Quase pronto! 🤑</h1>
+      <p>Este é um modelo de página que você pode usar para qualquer seção do site.  
+      Substitua este texto pelo conteúdo específico de cada página.</p>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Barbearia - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".menu ul").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

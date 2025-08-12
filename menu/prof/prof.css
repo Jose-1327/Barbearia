@@ -1,4 +1,4 @@
-/* Reset e fonte básica */
+/* Reset e fonte */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +11,10 @@ body {
   color: #072b4e;
 }
 
-/* Cabeçalho fixo */
+/* Cabeçalho */
 header {
   position: fixed;
+  top: 0;
   width: 100%;
   padding: 15px 20px;
   background: linear-gradient(to right, #063261, #008bd1);
@@ -34,7 +35,6 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .menu ul li a {
@@ -55,40 +55,36 @@ header {
   cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 20px 40px;
-  text-align: center;
-  background: linear-gradient(to bottom right, #cce6ff, #ffffff);
+/* Conteúdo principal */
+main {
+  padding-top: 90px; /* espaço para o header fixo */
 }
 
-.hero-content h1 {
-  font-size: clamp(24px, 5vw, 48px);
+.content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: 15px;
   color: #003366;
 }
 
-.hero-content p {
-  font-size: clamp(14px, 2.5vw, 20px);
-  margin: 20px 0;
+.content p {
+  font-size: clamp(14px, 2.5vw, 18px);
+  line-height: 1.6;
 }
 
-.btn {
-  background: #074486;
+/* Rodapé */
+footer {
+  background: #063261;
   color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 13px;
-  transition: background 0.3s;
-  display: inline-block;
-  font-size: clamp(14px, 2.5vw, 16px);
-}
-
-.btn:hover {
-  background: #0069d3;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
 
 /* Responsivo */
@@ -103,50 +99,22 @@ header {
     display: none;
     padding: 10px 0;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-
-  .menu ul li {
-    padding: 10px 20px;
-  }
-
-  .menu ul li a {
-    display: block;
-    width: 100%;
-    color: white;
-    font-weight: 500;
-    padding: 0,5px 0;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  .menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #e0f0ff;
   }
 
   .menu ul.show {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .hero {
-    padding-top: 80px;
-  }
-  .btn {
+  .menu ul li {
     padding: 10px 20px;
   }
-}
 
-@media (max-width: 350px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  .menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
