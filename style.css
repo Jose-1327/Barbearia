@@ -150,3 +150,13 @@ header {
     align-items: flex-start;
   }
 }
+
+/* Destacar página atual na barra/menu */
+.menu ul li a.active {
+  background: white;
+  border-radius:6px;
+  color: #063261;
+  padding: 8px 8px;  /* aumenta o espaço interno */
+  font-size: 18px;     /* aumenta o tamanho do texto */
+  font-weight: bold;   /* deixa mais destacado */
+}
