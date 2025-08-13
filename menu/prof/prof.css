@@ -128,3 +128,58 @@ footer {
   font-size: 18px;     /* aumenta o tamanho do texto */
   font-weight: bold;   /* deixa mais destacado */
 }
+
+
+.textoComImagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.textoEsquerda {
+  flex-direction: row;
+}
+
+.textoDireita {
+  flex-direction: row-reverse;
+}
+
+.textoComImagem img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.textoComImagem .texto {
+  max-width: 600px;
+  text-align: left;
+  font-size: 18px;
+  font-family: serif;
+  color: #6a1b4d;
+}
+
+@media (max-width: 768px) {
+  .textoComImagem {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .textoComImagem img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .textoComImagem .texto {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
