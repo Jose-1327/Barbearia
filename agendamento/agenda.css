@@ -11,6 +11,9 @@ body {
   background: linear-gradient(to bottom right, #022d55, #91c1ee);
   color: #072b4e;
   padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .cadastro-section {

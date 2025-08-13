@@ -9,6 +9,9 @@
 body {
   background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
   color: #072b4e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Cabeçalho fixo */
@@ -161,7 +164,12 @@ header {
   font-weight: bold;   /* deixa mais destacado */
 }
 
+/* Poste barbearia*/
+.logo-container {
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto verticalmente */
+}
+
 .iconPole {
-  position: absolute;
-  left: 0;
+  margin-right: 1px; /* Adiciona um espaço entre o ícone e o texto */
 }

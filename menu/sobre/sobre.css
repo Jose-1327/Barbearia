@@ -9,6 +9,9 @@
 body {
   background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
   color: #072b4e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -58,6 +61,7 @@ header {
 /* Conteúdo principal */
 main {
   padding-top: 90px; /* espaço para o header fixo */
+  flex-grow: 1;
 }
 
 .content {

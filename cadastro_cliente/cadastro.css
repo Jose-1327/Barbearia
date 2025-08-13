@@ -14,6 +14,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .cadastro-container {

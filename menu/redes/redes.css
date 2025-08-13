@@ -9,6 +9,9 @@
 body {
   background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
   color: #072b4e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -58,6 +61,7 @@ header {
 /* Conteúdo principal */
 main {
   padding-top: 90px; /* espaço para o header fixo */
+  flex-grow: 1;
 }
 
 .content {
@@ -127,4 +131,33 @@ footer {
   padding: 8px 8px;  /* aumenta o espaço interno */
   font-size: 18px;     /* aumenta o tamanho do texto */
   font-weight: bold;   /* deixa mais destacado */
+}
+
+/* Container para os ícones */
+.social-media-container {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  gap: 20px; /* Adiciona um espaço entre os ícones */
+  margin-top: 40px; /* Adiciona espaço acima do contêiner */
+}
+
+/* Estilo para os links de ícones */
+.social-icon {
+  display: inline-block;
+  width: 65px; /* Define o tamanho do ícone */
+  height: 65px; /* Define a altura do ícone */
+  
+  
+  border-radius: 50%; /* Torna o contêiner do ícone circular */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efeito de transição */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
+  
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
 }
