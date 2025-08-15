@@ -4,18 +4,18 @@
  * e define a fonte padrão do corpo da página.
  */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  padding: 0; /* Remove o padding padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total do elemento */
+  font-family: "Segoe UI", sans-serif; /* Define a família da fonte */
 }
 
 body {
-  background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
-  color: #072b4e;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e0f0ff, #ffffff); /* Define um gradiente de fundo */
+  color: #072b4e; /* Cor do texto principal */
+  display: flex; /* Habilita o Flexbox para o corpo da página */
+  flex-direction: column; /* Organiza os itens filhos em uma coluna */
+  min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da viewport */
 }
 
 /*
@@ -23,46 +23,46 @@ body {
  * Estiliza a barra de navegação no topo da página.
  */
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 20px;
-  background: linear-gradient(to right, #063261, #008bd1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  z-index: 10;
+  position: fixed; /* Fixa o cabeçalho no topo da página */
+  top: 0; /* Alinha o cabeçalho no topo */
+  width: 100%; /* Ocupa a largura total da tela */
+  padding: 15px 20px; /* Adiciona espaçamento interno */
+  background: linear-gradient(to right, #063261, #008bd1); /* Define um gradiente de fundo */
+  display: flex; /* Habilita o Flexbox */
+  justify-content: space-between; /* Espaça os itens (logo e menu) entre si */
+  align-items: center; /* Centraliza verticalmente os itens */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+  z-index: 10; /* Garante que o cabeçalho fique sobre outros elementos */
 }
 
 .logo {
-  font-size: clamp(18px, 4vw, 24px);
-  color: white;
-  font-weight: bold;
+  font-size: clamp(18px, 4vw, 24px); /* Tamanho da fonte responsivo para a logo */
+  color: white; /* Cor do texto da logo */
+  font-weight: bold; /* Deixa o texto em negrito */
 }
 
 .menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Habilita o Flexbox para a lista de menu */
+  gap: 20px; /* Espaço entre os itens do menu */
 }
 
 .menu ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: white; /* Cor dos links */
+  font-weight: 500; /* Define a espessura da fonte */
+  transition: color 0.3s; /* Adiciona uma transição suave na cor */
 }
 
 .menu ul li a:hover {
-  color: #e0f0ff;
+  color: #e0f0ff; /* Muda a cor ao passar o mouse */
 }
 
 .menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
+  display: none; /* Oculta o ícone do menu hambúrguer por padrão */
+  font-size: 30px; /* Tamanho do ícone */
+  color: white; /* Cor do ícone */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
 }
 
 /*
@@ -70,36 +70,36 @@ header {
  * Define o espaçamento e alinhamento do conteúdo principal.
  */
 main {
-  padding-top: 90px;
-  flex-grow: 1;
+  padding-top: 90px; /* Adiciona um espaço no topo para o cabeçalho fixo */
+  flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
 }
 
 .content {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+  max-width: 1000px; /* Largura máxima do conteúdo */
+  margin: auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto ao centro */
 }
 
 .content h1 {
-  font-size: clamp(24px, 5vw, 36px);
-  margin-bottom: 15px;
-  color: #003366;
+  font-size: clamp(24px, 5vw, 36px); /* Tamanho da fonte responsivo para o título */
+  margin-bottom: 15px; /* Margem inferior */
+  color: #003366; /* Cor do título */
 }
 
 .content p {
-  font-size: clamp(14px, 2.5vw, 18px);
-  line-height: 1.6;
+  font-size: clamp(14px, 2.5vw, 18px); /* Tamanho da fonte responsivo para o parágrafo */
+  line-height: 1.6; /* Altura da linha para melhor leitura */
 }
 
 /* Rodapé */
 footer {
-  background: #063261;
-  color: #c0c0c0;
-  text-align: center;
-  padding: 3px;
-  margin-top: 40px;
-  font-size: 11px;
+  background: #063261; /* Cor de fundo do rodapé */
+  color: #c0c0c0; /* Cor do texto */
+  text-align: center; /* Alinhamento do texto */
+  padding: 3px; /* Espaçamento interno */
+  margin-top: 40px; /* Margem superior */
+  font-size: 11px; /* Tamanho da fonte */
 }
 
 /*
@@ -108,32 +108,49 @@ footer {
  */
 @media (max-width: 768px) {
   .menu ul {
-    flex-direction: column;
-    background: linear-gradient(to bottom right, #063261, #008bd1);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    display: none;
-    padding: 10px 0;
-    border-radius: 0 0 10px 10px;
+    flex-direction: column; /* Alinha os itens do menu em coluna */
+    background: linear-gradient(to bottom right, #063261, #008bd1); /* Gradiente de fundo do menu */
+    position: absolute; /* Posição absoluta em relação ao cabeçalho */
+    top: 70px; /* Distância do topo */
+    right: 0; /* Alinha à direita */
+    width: 220px; /* Largura do menu */
+    display: none; /* Oculta o menu por padrão */
+    padding: 10px 0; /* Espaçamento interno */
+    border-radius: 0 0 10px 10px; /* Borda arredondada na parte inferior */
   }
 
   .menu ul.show {
-    display: flex;
+    display: flex; /* Exibe o menu quando a classe 'show' é ativada pelo JavaScript */
   }
 
   .menu ul li {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Espaçamento interno de cada item do menu */
   }
 
   .menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15); /* Fundo sutil ao passar o mouse */
+    border-radius: 5px; /* Borda arredondada no fundo */
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* Exibe o ícone do menu hambúrguer */
+  }
+  
+  /*
+   * Corrige o espaçamento lateral em telas menores.
+   * Aplica um padding lateral ao main, empurrando o conteúdo das bordas.
+   */
+  main {
+    padding-left: 20px; /* Adiciona espaço à esquerda */
+    padding-right: 20px; /* Adiciona espaço à direita */
+    padding-top: 90px; /* Mantém o padding do header */
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+  }
+  
+  /* * Aumenta o espaçamento do footer em telas menores.
+   */
+  footer {
+    padding: 3px 3px;
   }
 }
 
@@ -141,12 +158,12 @@ footer {
  * Destaque da página atual no menu
  */
 .menu ul li a.active {
-  background: white;
-  border-radius:6px;
-  color: #063261;
-  padding: 8px 8px;
-  font-size: 18px;
-  font-weight: bold;
+  background: white; /* Cor de fundo branca */
+  border-radius:6px; /* Borda arredondada */
+  color: #063261; /* Cor do texto */
+  padding: 8px 8px; /* Aumenta o espaço interno */
+  font-size: 18px; /* Aumenta o tamanho do texto */
+  font-weight: bold; /* Deixa mais destacado */
 }
 
 /*
@@ -194,13 +211,11 @@ footer {
 
 /*
  * Responsividade do bloco de texto com imagem
- * Removido o flex-wrap para garantir que a imagem e o texto
- * fiquem lado a lado. Ajuste o espaçamento e os tamanhos.
+ * Ajusta o espaçamento e os tamanhos para telas menores.
  */
 @media (max-width: 768px) {
   .textoComImagem {
-    gap: 10px; /* Reduz o espaçamento para telas menores */
-    padding: 0 10px; /* Reduz o padding para telas menores */
+    gap: 10px; /* Reduz o espaçamento entre a imagem e o texto */
   }
 
   .textoComImagem img {
