@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agenda</title>
   <link rel="stylesheet" href="agenda.css" />
-  <title>Agendamento</title>
 </head>
 <body>
+  <header>
+    <div class="logo-container">
+      
+      <div class="logo"> Agende seu horário! </div>
+    </div>
+    <!-- <main> -->
+    <nav class="menu">
+      <ul>
+        <li><a href="../../index.html">Início</a></li>
+        <li><a href="../menu/sobre/sobre.html">Sobre</a></li>
+        <li><a href="../menu/prof/prof.html">Profissionais</a></li>
+        <li><a href="../menu/serv/serv.html">Serviços</a></li>
+        <li><a href="../menu/redes/redes.html">Redes Sociais</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
 
   <section class="cadastro-section">
-    <div class="cadastro-container">
-      <h2>Agendamento</h2>
+    
+
       <form class="cadastro-form">
 
         <div class="form-group">
@@ -36,11 +54,17 @@
           <label>Total: <strong id="total">R$0,00</strong></label>
         </div>
 
-        <button type="submit" class="btn">Cadastrar</button>
+        <button type="submit" class="btn"> Agendar! </button>
       </form>
-    </div>
-  </section>
 
-  <script src="cadastro.js"></script>
+  </section>  
+<!-- </main>
+ 
+  <footer>
+    <p>© 2025 Barbearia - Todos os direitos reservados.</p>
+  </footer> -->
+
+
+  <script src="agenda.js"></script>
 </body>
 </html>

@@ -3,6 +3,11 @@ function formatarValor(valor) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
+function toggleMenu() {
+  const menuList = document.querySelector(".menu ul");
+  menuList.classList.toggle("show");
+}
+
 // Aguarda o carregamento completo do DOM antes de executar o script.
 document.addEventListener("DOMContentLoaded", function () {
   // Seleciona todos os checkboxes com a classe 'servico'.
@@ -43,3 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("total").textContent = "R$0,00";
   });
 });
+
+
+

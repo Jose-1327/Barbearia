@@ -1,4 +1,6 @@
-/* Reset básico */
+/*
+ * Reset básico e fonte padrão
+ */
 * {
   margin: 0;
   padding: 0;
@@ -7,65 +9,101 @@
 }
 
 body {
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #022d55, #91c1ee);
+  background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
   color: #072b4e;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  justify-content: center; /* Centraliza o formulário horizontalmente */
+  align-items: center; /* Centraliza o formulário verticalmente */
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+/*
+ * Estilização da seção de cadastro
+ */
+.cadastro-section {
+  width: 100%; /* Ocupa a largura total */
+  max-width: 500px; /* Largura máxima do contêiner */
+  padding: 20px;
 }
 
 .cadastro-container {
-  width: 100%;
-  max-width: 600px;
-  background: #ffffffd9;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0, 51, 102, 0.1);
+  background: white; /* Fundo branco para o formulário */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
 }
 
 .cadastro-container h2 {
+  font-size: clamp(24px, 5vw, 32px); /* Título responsivo */
+  margin-bottom: 25px;
+  color: #003366;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: clamp(20px, 4vw, 30px);
-  color: #083361;
 }
 
-.cadastro-form .form-group {
-  margin-bottom: 20px;
+/*
+ * Estilo do formulário e seus elementos
+ */
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os grupos de formulário */
 }
 
-.cadastro-form label {
-  display: block;
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 16px;
   margin-bottom: 8px;
   font-weight: 500;
+  color: #072b4e;
 }
 
-.cadastro-form input {
-  width: 100%;
+.form-group input {
   padding: 12px;
-  border: 1px solid #3396d8;
-  border-radius: 10px;
   font-size: 16px;
-  background-color: #f4faff;
+  border: 1px solid #c0c0c0; /* Borda cinza suave */
+  border-radius: 8px;
   transition: border-color 0.3s;
 }
 
-.cadastro-form input:focus {
-  border-color: #c5c8ca;
-  outline: none;
+.form-group input:focus {
+  outline: none; /* Remove a borda padrão ao focar */
+  border-color: #008bd1; /* Muda a cor da borda ao focar para destacar */
 }
 
-/* Responsivo */
+/*
+ * Botão (exemplo, caso você adicione)
+ */
+.btn-submit {
+  background: #074486;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 13px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+.btn-submit:hover {
+  background: #0069d3;
+}
+
+/*
+ * Responsividade para telas menores
+ */
 @media (max-width: 480px) {
   .cadastro-container {
-    padding: 20px;
+    padding: 20px; /* Reduz o padding interno em telas menores */
   }
-  .cadastro-form input {
-    font-size: 14px;
+
+  .cadastro-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 }
