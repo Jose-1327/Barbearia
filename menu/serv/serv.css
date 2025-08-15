@@ -85,10 +85,11 @@ main {
 /* Rodapé */
 footer {
   background: #063261;
-  color: white;
+  color: #c0c0c0;
   text-align: center;
-  padding: 15px;
+  padding: 3px;
   margin-top: 40px;
+  font-size: 11px;
 }
 
 /* Responsivo */
